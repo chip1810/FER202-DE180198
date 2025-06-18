@@ -1,8 +1,23 @@
+
+import {Table} from "react-bootstrap";
+
+
 const UserProfile = ({ user }) => (
-  <div>
-    <p>
-      Hello, {user.name}, {user.age} tuổi
-    </p>
-  </div>
+    <Table>
+       <tbody>
+        {name.map((name, index)=> (
+            <tr key={index}>
+            
+            <td>{index+1}</td>
+            <td>{name}</td>
+            
+            </tr>
+             
+        )
+    ) 
+}
+    </tbody>
+    </Table>
 );
+
 export default UserProfile;

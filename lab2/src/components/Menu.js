@@ -26,11 +26,13 @@ const pizzas = [
     img: 'images/menu4.png',
     tag: 'SALE',
   },
+  
 ];
 
-const Menu = () => (
+function Menu(){
+  return(
   <div className="container my-5">
-    <h2 className="text-white mb-4">Our Menu</h2>
+    <h2 className="text-white mb-4 text-center">Our Menu</h2>
     <div className="row">
       {pizzas.map((pizza, idx) => (
           <div className="col-md-3 mb-4" key={idx}>
@@ -74,6 +76,7 @@ const Menu = () => (
       ))}
     </div>
   </div>
-);
+  );
+}
 
 export default Menu; 

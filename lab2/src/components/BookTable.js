@@ -1,6 +1,7 @@
  import React from 'react';
 
-const BookTable = () => (
+function BookTable(){
+  return(
   <div className="container my-5">
     <h2 className="text-center text-white mb-4">Book Your Table</h2>
     <form className=" p-4 rounded">
@@ -10,6 +11,7 @@ const BookTable = () => (
         </div>
         <div className="col-md-4 mb-2">
           <input type="email" className="form-control" placeholder="Your Email *" required />
+          
         </div>
         <div className="col-md-4 mb-2">
           <select className="form-select" required>
@@ -27,5 +29,6 @@ const BookTable = () => (
     </form>
   </div>
 );
+}
 
 export default BookTable; 

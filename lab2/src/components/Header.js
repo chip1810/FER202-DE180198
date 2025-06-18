@@ -2,7 +2,8 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
-const Header = () => (
+function Header(){
+    return(
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
             <a className="navbar-brand" style={{ paddingLeft: '120px' }} href="#">Pizza House</a>
@@ -34,5 +35,6 @@ const Header = () => (
         </div>
     </nav>
 );
+}
 
 export default Header; 
