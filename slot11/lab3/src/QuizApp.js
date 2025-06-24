@@ -17,7 +17,7 @@ const quizData = [
     question: "Which planet is known as the Red Planet?",
     options: ["Earth", "Venus", "Mars", "Jupiter"],
     correctAnswer: "Mars"
-  }
+  },
 ];
 
 function QuizApp() {
