@@ -1,11 +1,18 @@
-import './App.css';
 import React from 'react';
-import Quiz from "./Quiz"
+import { QuizProvider } from './context/QuizContext';
+import Quiz from './components/Quiz';
+import QuestionInput from './components/QuestionInput';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 function App() {
   return (
-    <div className="App">
-      <Quiz />
-    </div>
+    <QuizProvider>
+      <div className="container mt-4">
+        <QuestionInput />
+
+        <Quiz />
+      </div>
+    </QuizProvider>
   );
 }
 
