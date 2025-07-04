@@ -13,6 +13,8 @@ function Contact() {
   });
 
   const [validated, setValidated] = useState(false);
+  const [message, setMessage] = useState("");
+  const [messageType, setMessageType] = useState(""); // success | danger
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -25,15 +27,29 @@ function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const formElement = e.currentTarget;
+
     if (formElement.checkValidity() === false) {
       e.stopPropagation();
+      setMessage("Vui lòng kiểm tra thông tin!");
+      setMessageType("danger");
+    } else {
+      setMessage("Nộp thành công!");
+      setMessageType("success");
     }
+
     setValidated(true);
   };
 
   return (
     <Container className="my-4">
       <h2>Contact Form</h2>
+
+      {message && (
+        <div className={`alert alert-${messageType}`} role="alert">
+          {message}
+        </div>
+      )}
+
       <Form noValidate validated={validated} onSubmit={handleSubmit}>
         <div className="row">
           <Form.Group className="col-md-4 mb-3" controlId="firstName">
@@ -139,6 +155,7 @@ function Contact() {
         </Form.Group>
 
         <Button type="submit">Submit form</Button>
+        
       </Form>
     </Container>
   );

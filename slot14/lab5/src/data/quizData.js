@@ -13,8 +13,8 @@ export const quizQuestions = [
   },
   {
     id: 3,
-    question: "2 + 2 equals?",
-    options: ["3", "4", "5", "6"],
-    correctAnswer: "4",
+    question: "Khánh có đẹp gái không?",
+    options: ["chắc chắn", "có thể", "không đẹp thì ai đẹp", "đẹp điên luôn"],
+    correctAnswer: "1" | "2" | "3" | "4", // Chọn nhiều đáp án
   },
 ];

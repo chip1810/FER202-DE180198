@@ -12,12 +12,17 @@ function Quiz() {
   };
 
   const handleSubmit = () => {
-    let correctCount = 0;
-    quizQuestions.forEach((q) => {
-      if (answers[q.id] === q.correctAnswer) correctCount++;
-    });
-    setScore(correctCount);
-  };
+  let correctCount = 0;
+  quizQuestions.forEach((q) => {
+    if (
+      (q.id === 3 && answers[q.id]) || 
+      (q.id !== 3 && answers[q.id] === q.correctAnswer)
+    ) {
+      correctCount++;
+    }
+  });
+  setScore(correctCount);
+};
 
   return (
     <Container>
@@ -30,7 +35,9 @@ function Quiz() {
 
       {score !== null && (
         <div style={{ marginTop: '20px', fontWeight: 'bold' }}>
+
           Bạn đúng {score} trên {quizQuestions.length} câu.
+
         </div>
       )}
     </Container>
