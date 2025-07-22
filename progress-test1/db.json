@@ -6,7 +6,8 @@
       "model": "XPS 13",
       "year": 2023,
       "price": "$999",
-      "image": "/images/dell-xps13.jpg"
+      "image": "/images/dell-xps13.jpg",
+      "quantity": 7
     },
     {
       "id": "2",
@@ -14,7 +15,8 @@
       "model": "MacBook Pro",
       "year": 2022,
       "price": "$2500",
-      "image": "/images/macbook-pro.jpg"
+      "image": "/images/macbook-pro.jpg",
+      "quantity": 8
     },
     {
       "id": "3",
@@ -22,7 +24,8 @@
       "model": "Spectre x360",
       "year": 2021,
       "price": "$1800",
-      "image": "/images/hp-spectre.jpg"
+      "image": "/images/hp-spectre.jpg",
+      "quantity": 9
     },
     {
       "id": "4",
@@ -30,15 +33,17 @@
       "model": "ThinkPad X1",
       "year": 2020,
       "price": "$1600",
-      "image": "/images/lenovo-thinkpad.jpg"
+      "image": "/images/lenovo-thinkpad.jpg",
+      "quantity": 9
     },
     {
-      "id": "9dbe",
+      "id": "5",
       "brand": "Samsung",
       "model": "Body Samsung",
       "year": "2025",
       "price": "3000$",
-      "image": "/images/samsung.jpg"
+      "image": "/images/samsung.jpg",
+      "quantity": 9
     }
   ],
   "UserAccounts": [

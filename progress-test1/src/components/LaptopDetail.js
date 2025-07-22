@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { Card, Container, Spinner, Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+import NotFoundPage from '../pages/NotFoundPage'; // thêm import ở đầu file
 
 function LaptopDetail() {
     const { id } = useParams();
@@ -22,9 +23,9 @@ function LaptopDetail() {
             .catch(() => setNotFound(true));
     }, [id]);
 
-    if (notFound) {
-        return <h3 className="text-center text-danger mt-5">404 Not Found: Laptop with id {id} does not exist.</h3>;
-    }
+   if (notFound) {
+  return <NotFoundPage />;
+}
 
     if (!laptop) {
         return (

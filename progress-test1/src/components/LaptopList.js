@@ -3,6 +3,8 @@ import axios from 'axios';
 import { Card, Button, Row, Col, Form } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import AddLaptopForm from './AddLaptopForm';
+import LaptopCarousel from './LaptopCarousel';
+import AddToCartButton from './AddToCartButton';
 
 function LaptopList() {
   const [laptops, setLaptops] = useState([]);
@@ -41,6 +43,7 @@ function LaptopList() {
       <h3 className="text-center my-4">Laptop List</h3>
 
       <AddLaptopForm onLaptopAdded={handleLaptopAdded} />
+      <LaptopCarousel />
 
       <Form className="mb-4">
         <Row className="g-2">
@@ -76,8 +79,11 @@ function LaptopList() {
                   <strong>Year:</strong> {laptop.year} <br />
                   <strong>Price:</strong> {laptop.price}
                 </Card.Text>
+                
+                <AddToCartButton laptop={laptop} />
                 <Button
-                  variant="primary"
+                  variant="info"
+                  className="ms-2"
                   onClick={() => navigate(`/laptops/${laptop.id}`)}
                 >
                   View Details
